@@ -29,4 +29,9 @@ contract ERC721 {
     }
 
     function transferFrom(address from, address to, uint tokenId) public {}
+    /**
+     * Todo : add all the method required for ERC721
+     * create a sample testcase to test
+     *
+     */
 }

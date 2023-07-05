@@ -1,6 +1,6 @@
 # Sample Hardhat Project
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+Creating the basic NFTS using alchemy and other resources
 
 Try running some of the following tasks:
 
