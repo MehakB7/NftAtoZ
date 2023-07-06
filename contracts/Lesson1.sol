@@ -6,6 +6,7 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract MyNft is ERC721URIStorage, Ownable {
+    uint256 price = 1 ether;
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
@@ -14,7 +15,8 @@ contract MyNft is ERC721URIStorage, Ownable {
     function mintNFT(
         address recipient,
         string memory tokenURI
-    ) public onlyOwner returns (uint256) {
+    ) public payable onlyOwner returns (uint256) {
+        require(msg.value >= price);
         _tokenIds.increment();
         uint256 newItemId = _tokenIds.current();
         _mint(recipient, newItemId);
